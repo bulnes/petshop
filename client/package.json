@@ -1,5 +1,5 @@
 {
-  "name": "front",
+  "name": "client",
   "version": "1.0.0",
   "description": "Front-end da aplicação de petshop",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "author": "Bruno Bulnes",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
