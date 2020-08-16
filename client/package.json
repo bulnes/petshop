@@ -4,7 +4,7 @@
   "description": "Front-end da aplicação de petshop",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
+    "start": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bruno Bulnes",
