@@ -1,6 +1,8 @@
 import initCadastro from './componentes/cadastro/componente-cadastro';
+import initTabela from './componentes/lista/listagem-cliente';
 
 const rotas = {
+  '/': initTabela,
   '/cadastro': initCadastro
 };
 
@@ -16,6 +18,17 @@ const navegacao = (pathname) => {
   const iniciarRota = rotas[window.location.pathname];
 
   rootDiv.appendChild(iniciarRota());
+};
+
+window.navegacao = navegacao;
+
+// evento de retirada de uma sessão do histórico
+window.onpopstate = () => {
+  rootDiv.innerHTML = '';
+
+  const rota = rotas[window.location.pathname];
+  
+  rootDiv.appendChild(rota());
 };
 
 export default navegacao;
